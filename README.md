@@ -7,7 +7,7 @@ docker pull postgres:alpine
 
 docker images
 
-docker run --name fastapi-postgres -e POSTGRES_PASSWORD=<password> -d -p 5432:5432 postgres:alpine
+docker run --name fastapi-postgres -e POSTGRES_PASSWORD=[password] -d -p 5432:5432 postgres:alpine
 
 docker ps
 
@@ -17,7 +17,7 @@ psql -U postgres
 
 create database fastapi_database;
 
- create user myuser with encrypted password '<password>';
+ create user myuser with encrypted password '[password]';
 
  grant all privileges on database fastapi_database to myuser;
 
